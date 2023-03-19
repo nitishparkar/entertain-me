@@ -1,24 +1,17 @@
-# README
+# Entertain Me [WIP]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An app that generates short film recommendations using Open AI's gpt-3.5-turbo model.
+## Setup
 
-Things you may want to cover:
+Obtain an API key from [OpenAI](https://platform.openai.com/account/api-keys) and store as a Rails secret.
+```
+$ rails credentials:edit
 
-* Ruby version
+open_ai:
+  access_token: <api-key>
+```
 
-* System dependencies
 
-* Configuration
+## License
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See `LICENSE` file.
