@@ -1,0 +1,16 @@
+.px-4.pt-4.text-center
+  .col-lg-6.mx-auto
+    %p.lead Short films for you, recommended by AI
+
+.row
+  .col
+    - @recos.each do |reco|
+      .card.my-2.rounded-5
+        .card-body
+          %h6.mb-0= reco['title']
+          %p.mb-0.opacity-75= reco['description']
+          = link_to "Watch on YouTube", "https://www.youtube.com/results?#{{search_query: reco['title']}.to_param}"
+
+.row.pt-4
+  .col.text-center
+    = link_to "Try again", root_path, class: 'mx-auto'

@@ -33,8 +33,17 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Adds Bootstrap
+gem "bootstrap", "~> 5.1.3"
+
+# Use Haml templates
+gem "haml-rails", "~> 2.0"
+
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "dartsass-rails"
+
+# To interact with OpenAI APIs
+gem "ruby-openai"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -51,4 +60,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-

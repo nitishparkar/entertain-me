@@ -1,0 +1,20 @@
+- genres = ["Action", "Adventure", "Animation", "Biography", "Black-Comedy", "Comedy", "Crime", "Cult-classic", "Documentary", "Drama", "Experimental", "Fairy-tale", "Futuristic", "Historical", "Horror", "Melodrama", "Musical", "Mystery", "Noir", "Political", "Psychological", "Romance", "Satire", "Sci-Fi & Fantasy", "Slapstick", "Social-issue", "Sports", "Superhero", "Thriller", "War"]
+
+.px-4.py-5.text-center
+  %h1.display-5.fw-bold Entertain Me!
+  .col-lg-6.mx-auto
+    %p.lead.mb-4 Your entertainment, personalized by AI
+
+= form_with url: generate_recommendations_path, method: :post, data: { turbo: false } do |form|
+  .row.row-cols-1.row-cols-md-6.g-4
+    = form.collection_check_boxes(:genres, genres, :to_s, :to_s, include_hidden: false) do |cb|
+      .col
+        .card
+          .card-body
+            = cb.label class: "d-inline-flex gap-3" do
+              = cb.check_box class: 'form-check-input', style: "font-size: 1.375em;"
+              %span.pt-1.form-checked-content= cb.value
+
+  .row.mt-4.mb-4.text-center
+    .col.align-self-center
+      = form.submit "Entertain Me!", class: 'btn btn-primary btn-lg'
