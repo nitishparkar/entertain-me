@@ -17,4 +17,4 @@
 
   .row.mt-4.mb-4.text-center
     .col.align-self-center
-      = form.submit "Entertain Me!", class: 'btn btn-primary btn-lg'
+      = form.submit "Entertain Me!", class: 'btn btn-primary btn-lg', onClick: "this.form.submit(); this.disabled=true; this.value='Good things take time, great things take a little longer...';"
