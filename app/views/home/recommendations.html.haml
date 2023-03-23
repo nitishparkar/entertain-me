@@ -9,7 +9,7 @@
         .card-body
           %h6.mb-0= reco['title']
           %p.mb-0.opacity-75= reco['description']
-          = link_to "Search on YouTube", "https://www.youtube.com/results?#{{search_query: reco['title']}.to_param}"
+          = link_to "Search on YouTube", "https://www.youtube.com/results?#{{search_query: reco['title']}.to_param}", target: "_blank"
 
 .row.pt-4
   .col.text-center
